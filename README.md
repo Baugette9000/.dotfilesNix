@@ -25,7 +25,7 @@
 
 ***List of programs in the configuration.nix:***
 
-    - vim (For Fallbacks with sudo, but nvim is preferred)
+    - vim ( For Fallbacks with sudo, but nvim is preferred )
     - wget
     - meson 
     - ninja
