@@ -86,6 +86,17 @@
     - unclutter
     - redshift
 
+### *Steps to reproduce* 
+
+    ❥ Git clone the repo into the home folder with:
+      $ git clone https://github.com/Baugette9000/.dotfilesNix/
+    
+    ❥ Install Home-Manager by following the guide at https://nix-community.github.io/home-manager/index.xhtml#sec-install-standalone
+    
+    ❥ Once Home-Manager is installed, run this command in the cloned repo:
+      $ sudo nixos-rebuild --flake .
+    
+
 ## *PLEASE NOTE*: Some of the configurations in this repo are forked from other projects. 
 
   *Repositories I know that are in the configuration:*
