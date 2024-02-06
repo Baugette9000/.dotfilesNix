@@ -94,7 +94,7 @@
   
   **Rofi - Most Rofi Configurations come from the Archcraft distro. (see, https://archcraft.io/ or https://github.com/archcraft-os**
   
-  **NvChad - NvChad is a Vim distro. (see, https://nvchad.com/ & https://github.com/NvChad/NvChad)**
+  **NvChad - NvChad is a Neovim distro. (see, https://nvchad.com/ & https://github.com/NvChad/NvChad)**
  
   **The startpage in the previews is forked from: https://gitlab.com/wolfiy/wlfys-minimal-startpage**
 
