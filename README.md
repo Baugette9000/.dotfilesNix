@@ -89,7 +89,7 @@
 ### *Steps to reproduce* 
 
     ❥ Git clone the repo into the home folder with:
-      $ git clone https://github.com/Baugette9000/.dotfilesNix/
+      $ git clone https://github.com/Baugette9000/.dotfilesNix/ ~/
     
     ❥ Install Home-Manager by following the guide at https://nix-community.github.io/home-manager/index.xhtml#sec-install-standalone
     
