@@ -4,7 +4,6 @@
   imports = [
   
   ./pkgs/dunst/dunst.nix
-  ./pkgs/autorandr/my-autorandr.nix
 
   ];
 
