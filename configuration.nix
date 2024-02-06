@@ -5,15 +5,16 @@
 { config, lib, pkgs, libx11, stdenv, inputs, ... }:
 
 {
+  # Add Imports 
   imports =
-    [ # Include the results of the hardware scan.
+    [       
       ./hardware-configuration.nix
-      ./dwm.nix
-      ./opentabletdriver.nix
-      ./nvidia.nix
-      ./steam.nix
-      ./picom.nix
-      ./garbagecollector.nix
+      ./features/dwm.nix
+      ./features/opentabletdriver.nix
+      ./features/nvidia.nix
+      ./features/steam.nix
+      ./features/picom.nix
+      ./features/garbagecollector.nix
       #./slstatus.nix
     ];
 

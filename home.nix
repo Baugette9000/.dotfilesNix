@@ -3,7 +3,7 @@
 {
   imports = [
   
-  ./dunst.nix
+  ./features/dunst.nix
 
   ];
 
