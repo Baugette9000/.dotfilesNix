@@ -35,7 +35,7 @@
     - libnotify
     - dwmblocks
     - floorp
-    - firefox
+    - firefox ( Commented out by Default for easy switching between Floorp and Firefox )
     - vesktop ( Custom Discord Client )
     - ncspot
     - git
