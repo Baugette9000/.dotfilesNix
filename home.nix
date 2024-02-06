@@ -1,12 +1,12 @@
-{ config, pkgs, self, x11, ... }:
+{ config, pkgs, self, x11, inputs, ... }:
 
 {
-
   imports = [
   
   ./dunst.nix
 
   ];
+
 
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -36,8 +36,6 @@
       xorg.xinput
   ];
 
-   # Home Manager is pretty good at managing dotfiles. The primary way to manage
-  # plain files is through 'home.file'.
   services.spotifyd = {
     enable = true;  
   };
@@ -93,4 +91,5 @@
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+
 }

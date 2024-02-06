@@ -17,15 +17,19 @@
     nixosConfigurations = {
       hardware.nvidia.enable = true;
       nixos = lib.nixosSystem {
-	inherit system;
-	modules = [ ./configuration.nix ];
+	      inherit system;
+	        modules = [ ./configuration.nix ];
        };
-    };
+    };    
+    firefox-addons = {
+        url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
+        inputs.nixpkgs.follows = "nixpkgs";
+      };
     homeConfigurations = { 
       hardware.nvidia.enable = true;
       cleo = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-	modules = [ ./home.nix ];
+	        modules = [ ./home.nix ];
       };
     };
   };
