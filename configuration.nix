@@ -143,6 +143,7 @@
     spotify-tui
     git
     pciutils
+    pavucontrol
     htop
     kitty
     rofi 
