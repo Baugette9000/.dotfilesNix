@@ -40,6 +40,7 @@
     - ncspot
     - git
     - pciutils
+    - pavucontrol
     - htop
     - kitty
     - rofi 
