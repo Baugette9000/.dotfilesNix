@@ -18,11 +18,11 @@ if [[ "$layout" == 'NO' ]]; then
 	option_4=" Capture in 5s"
 	option_5=" Capture in 10s"
 else
-	option_1=" Desktop"
-	option_2=" Area"
-	option_3=" Window"
-	option_4=" Capture in 5s"
-	option_5=" Capture in 10s"
+	option_1="  Desktop"
+	option_2="  Area"
+	option_3="  Window"
+	option_4="  Capture in 5s"
+	option_5="  Capture in 10s"
 fi
 
 # Rofi CMD

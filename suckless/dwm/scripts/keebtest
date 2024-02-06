@@ -37,7 +37,7 @@ gtype () {
 options="$mtype\n$ntype\n$gtype\n$ttype"
 
 
-chosen="$(echo -e "$options" | $rofi_cmd -p '  Typing Tests' -dmenu -selected-row 0 -lines 5 -eh 1 -width 100 -padding 400 -opacity -bw 0 -fullscreen true "85")"
+chosen="$(echo -e "$options" | $rofi_cmd -p '  Typing Tests' -dmenu -selected-row 0 -lines 5 -eh 1 -width 100 -padding 400 -opacity -bw 0 -fullscreen true "85")"
 # chosen="$(echo -e "$options" | $rofi_cmd -p 'Select Bookmarks' -dmenu -fullscreen -selected-row 0)"
 case $chosen in
       $mtype)
