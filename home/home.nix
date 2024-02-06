@@ -3,7 +3,7 @@
 {
   imports = [
   
-  ./pkgs/dunst/dunst.nix
+  ../pkgs/dunst/dunst.nix
 
   ];
 

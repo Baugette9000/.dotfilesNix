@@ -9,4 +9,4 @@ otd-daemon &
 spotifyd &
 ~/.fehbg &
 picom -b &
-#~/.dotfilesNix/suckless/slstatus/result/bin/slstatus
+exec ~/.dotfilesNix/suckless/slstatus/result/bin/slstatus &

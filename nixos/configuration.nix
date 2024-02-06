@@ -9,12 +9,12 @@
   imports =
     [       
       ./hardware-configuration.nix
-      ./pkgs/dwm/dwm.nix
-      ./pkgs/opentabletdriver/opentabletdriver.nix
-      ./pkgs/nvidia/nvidia.nix
-      ./pkgs/steam/steam.nix
-      ./pkgs/picom/picom.nix
-      ./pkgs/garbagecollector/garbagecollector.nix
+      ../pkgs/dwm/dwm.nix
+      ../pkgs/opentabletdriver/opentabletdriver.nix
+      ../pkgs/nvidia/nvidia.nix
+      ../pkgs/steam/steam.nix
+      ../pkgs/picom/picom.nix
+      ../pkgs/garbagecollector/garbagecollector.nix
       #./slstatus.nix
     ];
 

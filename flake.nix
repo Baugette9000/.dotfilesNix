@@ -18,7 +18,7 @@
       hardware.nvidia.enable = true;
       nixos = lib.nixosSystem {
 	      inherit system;
-	        modules = [ ./configuration.nix ];
+	        modules = [ ./nixos/configuration.nix ];
        };
     };    
     firefox-addons = {
@@ -29,7 +29,7 @@
       hardware.nvidia.enable = true;
       cleo = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-	        modules = [ ./home.nix ];
+	        modules = [ ./home/home.nix ];
       };
     };
   };
