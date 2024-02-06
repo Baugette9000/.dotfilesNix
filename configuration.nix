@@ -13,6 +13,7 @@
       ./nvidia.nix
       ./steam.nix
       ./picom.nix
+      ./garbagecollector.nix
       #./slstatus.nix
     ];
 
@@ -30,7 +31,8 @@
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
+  nix.optimise.automatic = true;
+  nix.optimise.dates = [ "03:45" ]; # Optional; allows customizing optimisation schedu
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
