@@ -21,7 +21,7 @@
 ** **
 ### *Requirements:*
 - *Have NixOS Installed (duh!)*
-- *Must have Home-Manager installed (see https://nix-community.github.io/home-manager/)*
+- *Have Home-Manager installed (see https://nix-community.github.io/home-manager/)*
 
 ***List of programs in the configuration.nix:***
 
