@@ -20,10 +20,16 @@
 
   # Bootloader.
   boot.kernelPackages = pkgs.linuxPackages_latest;
-  boot.loader.systemd-boot.enable = true;
+  #boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader.grub = {
+    enable = true; 
+    devices = [ "nodev" ];
+    efiSupport = true;
+    useOSProber = true;
+    };
 
-# Enable the X11 windowing system.
+  # Enable the X11 windowing system.
   services.xserver.enable = true;
 
   # Enable the KDE Desktop Environment.
