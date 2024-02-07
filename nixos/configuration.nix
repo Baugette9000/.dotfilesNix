@@ -151,6 +151,10 @@
     spotify-tui
     git
     pciutils
+    #uutils-coreutils-noprefix
+    #coreutils-full
+    toybox
+    #python311Packages.uptime
     pavucontrol
     htop
     kitty
