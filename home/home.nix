@@ -3,7 +3,7 @@
 {
   imports = [
   
-  ../pkgs/dunst/dunst.nix
+  ./dunst/dunst.nix
 
   ];
 
@@ -43,33 +43,33 @@
   home.file = {
   # ".config/dunst/dunstrc".source = ./dunst/dunstrc;
   # DWM
-  ".dwm/autostart.sh".source = ./suckless/dwm/autostart.sh;
+  ".dwm/autostart.sh".source = .././suckless/dwm/autostart.sh;
   # Bashrc 
-  ".bashrc".source = ./bash/.bashrc;
+  ".bashrc".source = .././bash/.bashrc;
   # Kitty 
-  ".config/kitty/kitty.conf".source = ./kitty/kitty.conf;
+  ".config/kitty/kitty.conf".source = .././kitty/kitty.conf;
   # Rofi 
-  ".config/rofi/config.rasi".source = ./rofi/config.rasi;
+  ".config/rofi/config.rasi".source = .././rofi/config.rasi;
   # Picom 
-  ".config/picom/picom.conf".source = ./picom/picom.conf;
+  ".config/picom/picom.conf".source = .././picom/picom.conf;
   # Nvim 
-  ".config/nvim/init.lua".source = ./nvim/init.lua;
-  ".config/nvim/lazy-lock.json".source = ./nvim/lazy-lock.json;
-  ".config/nvim/lua/core/bootstrap.lua".source = ./nvim/lua/core/bootstrap.lua;
-  ".config/nvim/lua/core/default_config.lua".source = ./nvim/lua/core/default_config.lua;
-  ".config/nvim/lua/core/init.lua".source = ./nvim/lua/core/init.lua;
-  ".config/nvim/lua/core/mappings.lua".source = ./nvim/lua/core/mappings.lua;
-  ".config/nvim/lua/core/utils.lua".source = ./nvim/lua/core/utils.lua;
-  ".config/nvim/lua/custom/chadrc.lua".source = ./nvim/lua/custom/chadrc.lua;
-  ".config/nvim/lua/plugins/init.lua".source = ./nvim/lua/plugins/init.lua;
-  ".config/nvim/lua/plugins/configs/cmp.lua".source = ./nvim/lua/plugins/configs/cmp.lua;
-  ".config/nvim/lua/plugins/configs/mason.lua".source = ./nvim/lua/plugins/configs/mason.lua;
-  ".config/nvim/lua/plugins/configs/lspconfig.lua".source = ./nvim/lua/plugins/configs/lspconfig.lua;
-  ".config/nvim/lua/plugins/configs/nvimtree.lua".source = ./nvim/lua/plugins/configs/nvimtree.lua;
-  ".config/nvim/lua/plugins/configs/telescope.lua".source = ./nvim/lua/plugins/configs/telescope.lua;
-  ".config/nvim/lua/plugins/configs/lazy_nvim.lua".source = ./nvim/lua/plugins/configs/lazy_nvim.lua;
-  ".config/nvim/lua/plugins/configs/others.lua".source = ./nvim/lua/plugins/configs/others.lua;
-  ".config/nvim/lua/plugins/configs/treesitter.lua".source = ./nvim/lua/plugins/configs/treesitter.lua;
+  ".config/nvim/init.lua".source = .././nvim/init.lua;
+  ".config/nvim/lazy-lock.json".source = .././nvim/lazy-lock.json;
+  ".config/nvim/lua/core/bootstrap.lua".source = .././nvim/lua/core/bootstrap.lua;
+  ".config/nvim/lua/core/default_config.lua".source = .././nvim/lua/core/default_config.lua;
+  ".config/nvim/lua/core/init.lua".source = .././nvim/lua/core/init.lua;
+  ".config/nvim/lua/core/mappings.lua".source = .././nvim/lua/core/mappings.lua;
+  ".config/nvim/lua/core/utils.lua".source = .././nvim/lua/core/utils.lua;
+  ".config/nvim/lua/custom/chadrc.lua".source = .././nvim/lua/custom/chadrc.lua;
+  ".config/nvim/lua/plugins/init.lua".source = .././nvim/lua/plugins/init.lua;
+  ".config/nvim/lua/plugins/configs/cmp.lua".source = .././nvim/lua/plugins/configs/cmp.lua;
+  ".config/nvim/lua/plugins/configs/mason.lua".source = .././nvim/lua/plugins/configs/mason.lua;
+  ".config/nvim/lua/plugins/configs/lspconfig.lua".source = .././nvim/lua/plugins/configs/lspconfig.lua;
+  ".config/nvim/lua/plugins/configs/nvimtree.lua".source = .././nvim/lua/plugins/configs/nvimtree.lua;
+  ".config/nvim/lua/plugins/configs/telescope.lua".source = .././nvim/lua/plugins/configs/telescope.lua;
+  ".config/nvim/lua/plugins/configs/lazy_nvim.lua".source = .././nvim/lua/plugins/configs/lazy_nvim.lua;
+  ".config/nvim/lua/plugins/configs/others.lua".source = .././nvim/lua/plugins/configs/others.lua;
+  ".config/nvim/lua/plugins/configs/treesitter.lua".source = .././nvim/lua/plugins/configs/treesitter.lua;
   # Dwm Autostart Symlink 
   #".dwm/autostart.sh".source = ./sucklesss/dwm/autostart.sh;
   };

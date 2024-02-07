@@ -138,6 +138,13 @@
     dwmblocks
     floorp
   # firefox
+    wpgtk
+    nwg-look
+    gtk-engine-murrine
+    qt6Packages.qtstyleplugin-kvantum
+    qt5.qtquickcontrols2   
+    qt5.qtgraphicaleffects
+    zoom-us
     vesktop
     spotifyd
     ncspot
