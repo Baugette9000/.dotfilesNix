@@ -35,7 +35,8 @@
       xorg.xinit
       xorg.xinput
   ];
-
+  
+  services.sxhkd.enable = true;
   services.spotifyd = {
     enable = true;  
   };
