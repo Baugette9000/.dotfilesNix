@@ -9,8 +9,7 @@
   imports =
     [       
       ./hardware-configuration.nix
-      #../pkgs/dwm/dwm.nix
-      ../pkgs/bspwm/bspwm.nix
+      ../pkgs/dwm/dwmwm.nix
       ../pkgs/opentabletdriver/opentabletdriver.nix
       ../pkgs/nvidia/nvidia.nix
       ../pkgs/steam/steam.nix
@@ -143,15 +142,11 @@
     pkg-config
     libnotify
     dwmblocks
-    bspwm
     floorp
-    sxhkd
   # firefox
     wpgtk
     nwg-look
     gtk-engine-murrine
-    libsForQt5.plasma-applet-virtual-desktop-bar
-    libsForQt5.bismuth
     qt6Packages.qtstyleplugin-kvantum
     qt5.qtquickcontrols2   
     qt5.qtgraphicaleffects

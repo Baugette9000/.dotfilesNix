@@ -2,9 +2,13 @@
 
 {
   services.xserver.windowManager.dwm.enable = true;
-    nixpkgs.overlays = [
-     (final: prev: {
-	dwm = prev.dwm.overrideAttrs (old :{ src = /home/cleo/.dotfilesNix/suckless/dwm ;         }); 
-      })
-   ];
+    services.xserver.windowManager.dwm.package = pkgs.dwm.override {
+    conf = /home/cleo/.dotfilesNix/suckless/dwm;
+    patches = [ /home/cleo/.dotfilesNix/suckless/dwm ]; # Or some `fetchPatch` thing
+  };
+  #nixpkgs.overlays = [
+  #   (final: prev: {
+	#dwm = prev.dwm.overrideAttrs (old :{ src = /home/cleo/.dotfilesNix/suckless/dwm;});
+  #    })
+  #];
 }
