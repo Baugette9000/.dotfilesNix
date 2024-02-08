@@ -9,7 +9,7 @@
   imports =
     [       
       ./hardware-configuration.nix
-      ../pkgs/dwm/dwm.nix
+      ../pkgs/dwm/dwmwm.nix
       ../pkgs/opentabletdriver/opentabletdriver.nix
       ../pkgs/nvidia/nvidia.nix
       ../pkgs/steam/steam.nix

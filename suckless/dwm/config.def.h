@@ -1,17 +1,26 @@
-/* See LICENSE file for copyright and license details. */
+
+/* |\   ___ \|\  \     |\  \|\   _ \  _   \     */
+/* \ \  \_|\ \ \  \    \ \  \ \  \\\__\ \  \    */
+/*  \ \  \ \\ \ \  \  __\ \  \ \  \\|__| \  \   */
+/*   \ \  \_\\ \ \  \|\__\_\  \ \  \    \ \  \  */
+/*    \ \_______\ \____________\ \__\    \ \__\ */
+/*     \|_______|\|____________|\|__|     \|__| */
+/*                                              */
+/*   By Suckless.. software that "Sucks less"   */
+/*         Config Forked by Breadchan           */
 
 /* appearance */
 #if ROUNDED_CORNERS_PATCH
-static const unsigned int borderpx       = 0;   /* border pixel of windows */
+static const unsigned int borderpx       = 3;   /* border pixel of windows */
 static const int corner_radius           = 10;
 #else
-static const unsigned int borderpx       = 1;   /* border pixel of windows */
+static const unsigned int borderpx       = 3;   /* border pixel of windows */
 #endif // ROUNDED_CORNERS_PATCH
 #if BAR_BORDER_PATCH
 /* This allows the bar border size to be explicitly set separately from borderpx.
  * If left as 0 then it will default to the borderpx value of the monitor and will
  * automatically update with setborderpx. */
-static const unsigned int barborderpx    = 0;  /* border pixel of bar */
+static const unsigned int barborderpx    = 3;  /* border pixel of bar */
 #endif // BAR_BORDER_PATCH
 static const unsigned int snap           = 32;  /* snap pixel */
 #if SWALLOW_PATCH
@@ -26,8 +35,8 @@ static int nomodbuttons                  = 1;   /* allow client mouse button bin
 #if VANITYGAPS_PATCH
 static const unsigned int gappih         = 20;  /* horiz inner gap between windows */
 static const unsigned int gappiv         = 10;  /* vert inner gap between windows */
-static const unsigned int gappoh         = 10;  /* horiz outer gap between windows and screen edge */
-static const unsigned int gappov         = 30;  /* vert outer gap between windows and screen edge */
+static const unsigned int gappoh         = 20;  /* horiz outer gap between windows and screen edge */
+static const unsigned int gappov         = 20;  /* vert outer gap between windows and screen edge */
 static const int smartgaps_fact          = 1;   /* gap factor when there is only one client; 0 = no gaps, 3 = 3x outer gaps */
 #endif // VANITYGAPS_PATCH
 #if AUTOSTART_PATCH
@@ -56,7 +65,7 @@ static const int showtab                 = showtab_auto;        /* Default tab b
 static const int toptab                  = False;               /* False means bottom tab bar */
 #endif // TAB_PATCH
 #if BAR_HEIGHT_PATCH
-static const int bar_height              = 0;   /* 0 means derive from font, >= 1 explicit height */
+static const int bar_height              = 30;   /* 0 means derive from font, >= 1 explicit height */
 #endif // BAR_HEIGHT_PATCH
 #if BAR_PADDING_PATCH
 static const int vertpad                 = 10;  /* vertical padding of bar */
@@ -160,51 +169,51 @@ static void (*bartabmonfns[])(Monitor *) = { NULL /* , customlayoutfn */ };
 #endif // MONOCLE_LAYOUT
 #endif // BAR_TABGROUPS_PATCH
 #if BAR_PANGO_PATCH
-static const char font[]                 = "monospace 10";
+static const char font[]                 = "JetBrainsMono Nerd Font 10";
 #else
-static const char *fonts[]               = { "monospace:size=10" };
+static const char *fonts[]               = { "JetBrainsMono Nerd Font:size=10" };
 #endif // BAR_PANGO_PATCH
-static const char dmenufont[]            = "monospace:size=10";
+static const char dmenufont[]            = "JetBrainsMono Nerd Font:size=10";
 
 static char c000000[]                    = "#000000"; // placeholder value
 
-static char normfgcolor[]                = "#bbbbbb";
-static char normbgcolor[]                = "#222222";
+static char normfgcolor[]                = "#fbf1c7";
+static char normbgcolor[]                = "#32302f";
 static char normbordercolor[]            = "#444444";
 static char normfloatcolor[]             = "#db8fd9";
 
-static char selfgcolor[]                 = "#eeeeee";
-static char selbgcolor[]                 = "#005577";
-static char selbordercolor[]             = "#005577";
-static char selfloatcolor[]              = "#005577";
+static char selfgcolor[]                 = "#fbf1c7";
+static char selbgcolor[]                 = "#d3869b";
+static char selbordercolor[]             = "#d3869b";
+static char selfloatcolor[]              = "#d3869b";
 
-static char titlenormfgcolor[]           = "#bbbbbb";
-static char titlenormbgcolor[]           = "#222222";
+static char titlenormfgcolor[]           = "#fbf1c7";
+static char titlenormbgcolor[]           = "#32302f";
 static char titlenormbordercolor[]       = "#444444";
 static char titlenormfloatcolor[]        = "#db8fd9";
 
-static char titleselfgcolor[]            = "#eeeeee";
-static char titleselbgcolor[]            = "#005577";
-static char titleselbordercolor[]        = "#005577";
-static char titleselfloatcolor[]         = "#005577";
+static char titleselfgcolor[]            = "#fbf1c7";
+static char titleselbgcolor[]            = "#d3869b";
+static char titleselbordercolor[]        = "#d3869b";
+static char titleselfloatcolor[]         = "#d3869b";
 
-static char tagsnormfgcolor[]            = "#bbbbbb";
-static char tagsnormbgcolor[]            = "#222222";
+static char tagsnormfgcolor[]            = "#fbf1c7";
+static char tagsnormbgcolor[]            = "#32302f";
 static char tagsnormbordercolor[]        = "#444444";
 static char tagsnormfloatcolor[]         = "#db8fd9";
 
-static char tagsselfgcolor[]             = "#eeeeee";
-static char tagsselbgcolor[]             = "#005577";
-static char tagsselbordercolor[]         = "#005577";
-static char tagsselfloatcolor[]          = "#005577";
+static char tagsselfgcolor[]             = "#fbf1c7";
+static char tagsselbgcolor[]             = "#d3869b";
+static char tagsselbordercolor[]         = "#d3869b";
+static char tagsselfloatcolor[]          = "#d3869b";
 
 static char hidnormfgcolor[]             = "#005577";
 static char hidselfgcolor[]              = "#227799";
-static char hidnormbgcolor[]             = "#222222";
-static char hidselbgcolor[]              = "#222222";
+static char hidnormbgcolor[]             = "#32302f";
+static char hidselbgcolor[]              = "#32302f";
 
-static char urgfgcolor[]                 = "#bbbbbb";
-static char urgbgcolor[]                 = "#222222";
+static char urgfgcolor[]                 = "#fbf1c7";
+static char urgbgcolor[]                 = "#32302f";
 static char urgbordercolor[]             = "#ff0000";
 static char urgfloatcolor[]              = "#db8fd9";
 
@@ -220,44 +229,8 @@ static char scratchnormbordercolor[]     = "#77547E";
 static char scratchnormfloatcolor[]      = "#77547E";
 #endif // RENAMED_SCRATCHPADS_PATCH
 
-#if BAR_FLEXWINTITLE_PATCH
-static char normTTBbgcolor[]             = "#330000";
-static char normLTRbgcolor[]             = "#330033";
-static char normMONObgcolor[]            = "#000033";
-static char normGRIDbgcolor[]            = "#003300";
-static char normGRD1bgcolor[]            = "#003300";
-static char normGRD2bgcolor[]            = "#003300";
-static char normGRDMbgcolor[]            = "#506600";
-static char normHGRDbgcolor[]            = "#b96600";
-static char normDWDLbgcolor[]            = "#003333";
-static char normSPRLbgcolor[]            = "#333300";
-static char normfloatbgcolor[]           = "#115577";
-static char actTTBbgcolor[]              = "#440000";
-static char actLTRbgcolor[]              = "#440044";
-static char actMONObgcolor[]             = "#000044";
-static char actGRIDbgcolor[]             = "#004400";
-static char actGRD1bgcolor[]             = "#004400";
-static char actGRD2bgcolor[]             = "#004400";
-static char actGRDMbgcolor[]             = "#507711";
-static char actHGRDbgcolor[]             = "#b97711";
-static char actDWDLbgcolor[]             = "#004444";
-static char actSPRLbgcolor[]             = "#444400";
-static char actfloatbgcolor[]            = "#116688";
-static char selTTBbgcolor[]              = "#550000";
-static char selLTRbgcolor[]              = "#550055";
-static char selMONObgcolor[]             = "#212171";
-static char selGRIDbgcolor[]             = "#005500";
-static char selGRD1bgcolor[]             = "#005500";
-static char selGRD2bgcolor[]             = "#005500";
-static char selGRDMbgcolor[]             = "#508822";
-static char selHGRDbgcolor[]             = "#b98822";
-static char selDWDLbgcolor[]             = "#005555";
-static char selSPRLbgcolor[]             = "#555500";
-static char selfloatbgcolor[]            = "#117799";
-#endif // BAR_FLEXWINTITLE_PATCH
-
 #if BAR_ALPHA_PATCH
-static const unsigned int baralpha = 0xd0;
+static const unsigned int baralpha = "#32302f";
 static const unsigned int borderalpha = OPAQUE;
 static const unsigned int alphas[][3] = {
 	/*                       fg      bg        border     */
@@ -407,9 +380,9 @@ static const char *const autostart[] = {
 #endif // COOL_AUTOSTART_PATCH
 
 #if RENAMED_SCRATCHPADS_PATCH
-static const char *scratchpadcmd[] = {"s", "st", "-n", "spterm", NULL};
+/* static const char *scratchpadcmd[] = {"s", "st", "-n", "spterm", NULL}; */
 #elif SCRATCHPADS_PATCH
-const char *spcmd1[] = {"st", "-n", "spterm", "-g", "120x34", NULL };
+const char *spcmd1[] = {"st", "-n", "spterm", "-g", "120x21", NULL };
 static Sp scratchpads[] = {
    /* name          cmd  */
    {"spterm",      spcmd1},
@@ -444,12 +417,12 @@ static Sp scratchpads[] = {
  * them. This works seamlessly with alternative tags and alttagsdecoration patches.
  */
 #if NAMETAG_PATCH
-static char tagicons[][NUMTAGS][MAX_TAGLEN] =
+static char tagicons[][NUMTAGS][MAX_TAGLEN] = { "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX" },
 #else
 static char *tagicons[][NUMTAGS] =
 #endif // NAMETAG_PATCH
 {
-	[DEFAULT_TAGS]        = { "1", "2", "3", "4", "5", "6", "7", "8", "9" },
+	[DEFAULT_TAGS]        = { "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX" },
 	[ALTERNATIVE_TAGS]    = { "A", "B", "C", "D", "E", "F", "G", "H", "I" },
 	[ALT_TAGS_DECORATION] = { "<1>", "<2>", "<3>", "<4>", "<5>", "<6>", "<7>", "<8>", "<9>" },
 };
@@ -769,7 +742,8 @@ static const char *xkb_layouts[]  = {
 #endif // XKB_PATCH
 
 /* key definitions */
-#define MODKEY Mod1Mask
+#define MODKEY Mod4Mask
+#define ALTKEY Mod1Mask
 #if COMBO_PATCH && SWAPTAGS_PATCH && TAGOTHERMONITOR_PATCH
 #define TAGKEYS(KEY,TAG) \
 	{ MODKEY,                       KEY,      comboview,      {.ui = 1 << TAG} }, \
@@ -854,29 +828,17 @@ static const char *xkb_layouts[]  = {
 #if !NODMENU_PATCH
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 #endif // NODMENU_PATCH
-static const char *dmenucmd[] = {
-	"dmenu_run",
-	#if !NODMENU_PATCH
-	"-m", dmenumon,
-	#endif // NODMENU_PATCH
-	"-fn", dmenufont,
-	"-nb", normbgcolor,
-	"-nf", normfgcolor,
-	"-sb", selbgcolor,
-	"-sf", selfgcolor,
-	#if BAR_DMENUMATCHTOP_PATCH
-	topbar ? NULL : "-b",
-	#endif // BAR_DMENUMATCHTOP_PATCH
-	NULL
-};
-static const char *termcmd[]  = { "st", NULL };
 
 #if BAR_STATUSCMD_PATCH
+#define CLICKABLE_BLOCKS 1
 #if BAR_DWMBLOCKS_PATCH
 /* This defines the name of the executable that handles the bar (used for signalling purposes) */
 #define STATUSBAR "dwmblocks"
+#define CLICKABLE_BLOCKS 1
 #else
 /* commands spawned when clicking statusbar, the mouse button pressed is exported as BUTTON */
+
+
 static const StatusCmd statuscmds[] = {
 	{ "notify-send Volume$BUTTON", 1 },
 	{ "notify-send CPU$BUTTON", 2 },
@@ -884,6 +846,18 @@ static const StatusCmd statuscmds[] = {
 };
 /* test the above with: xsetroot -name "$(printf '\x01Volume |\x02 CPU |\x03 Battery')" */
 static const char *statuscmd[] = { "/bin/sh", "-c", NULL, NULL };
+ #if BAR_DWMBLOCKS_SIGUSR1_PATCH 
+ sv.sival_int = (statussig << 8) | arg->i; 
+ if (sigqueue(statuspid, SIGUSR1, sv) == -1) { 
+ 	if (errno == ESRCH) { 
+ 		if (!getstatusbarpid()) 
+ 			sigqueue(statuspid, SIGUSR1, sv); 
+ 	} 
+ } 
+ #else 
+ sv.sival_int = arg->i; 
+ sigqueue(statuspid, SIGRTMIN+statussig, sv); 
+#endif // BAR_DWMBLOCKS_SIGUSR1_PATCH
 #endif // BAR_DWMBLOCKS_PATCH
 #endif // BAR_STATUSCMD_PATCH
 
@@ -895,15 +869,66 @@ static const Key on_empty_keys[] = {
 };
 #endif // ON_EMPTY_KEYS_PATCH
 
+/* Bind Executables */
+static const char *dmenucmd[] = { "rofi", "-show", "drun", NULL };
+static const char *termcmd[]  = { "kitty", NULL };
+static const char *sccmd[]    = { "/home/cleo/suckless/dwm/scripts/rofi_screenshot", "ARGUMENTS", NULL };
+static const char *xcmd[]     = { "/home/cleo/suckless/dwm/scripts/rofi_powermenu", "ARGUMENTS", NULL };
+static const char *bookcmd[]     = { "/home/cleo/suckless/dwm/scripts/bookmarks", "ARGUMENTS", NULL };
+static const char *wallcmd[]  = { "/home/cleo/suckless/dwm/scripts/walls", "ARGUMENTS", NULL };
+static const char *ucmd[]     = { "kitty", "-e", "--hold", "sudo", "pacman", "-Syyu", "&", "exit", NULL };
+
+/* keybindings */
 static const Key keys[] = {
+  { MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
+	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
+  { MODKEY,                       XK_s,      spawn,          {.v = sccmd }},
+  { MODKEY,                       XK_x,      spawn,          {.v = xcmd }},
+  { MODKEY|ShiftMask,             XK_b,      spawn,          {.v = bookcmd }},
+  { MODKEY,                       XK_u,      spawn,          {.v = ucmd }},
+  { MODKEY,                       XK_p,      spawn,          {.v = wallcmd }},
+	{ MODKEY,                       XK_0,      togglebar,      {0} },
+	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
+	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
+	{ MODKEY,                       XK_o,      incnmaster,     {.i = -1 } },
+	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
+	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
+	{ MODKEY,                       XK_Return, zoom,           {0} },
+	{ MODKEY,                       XK_Tab,    view,           {0} },
+	{ MODKEY,                       XK_c,      killclient,     {0} },
+	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
+	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
+	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
+	{ MODKEY,                       XK_space,  setlayout,      {0} },
+	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
+	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
+	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
+	{ MODKEY,                       XK_comma,  focusmon,       {.i = -1 } },
+	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
+	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
+	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } }, 
+	TAGKEYS(                        XK_1,                      0)
+	TAGKEYS(                        XK_2,                      1)
+	TAGKEYS(                        XK_3,                      2)
+	TAGKEYS(                        XK_4,                      3)
+	TAGKEYS(                        XK_5,                      4)
+	TAGKEYS(                        XK_6,                      5)
+	TAGKEYS(                        XK_7,                      6)
+	TAGKEYS(                        XK_8,                      7)
+	TAGKEYS(                        XK_9,                      8)
+	{ MODKEY,                       XK_BackSpace,      quit,           {0} },
+
+  /* Scratchpads */
+  { MODKEY,                       XK_t,      togglescratch,          {.ui = 0 } },
+/*{ MODKEY|ControlMask,           XK_y,      setscratch,             {.ui = 0 } },
+	{ MODKEY|ShiftMask,             XK_i,      removescratch,          {.ui = 0 } },*/
+
 	/* modifier                     key            function                argument */
 	#if KEYMODES_PATCH
 	{ MODKEY,                       XK_Escape,     setkeymode,             {.ui = COMMANDMODE} },
-	#endif // KEYMODES_PATCH
-	{ MODKEY,                       XK_p,          spawn,                  {.v = dmenucmd } },
+	#endif // KEYMODES_PATCH	
 	{ MODKEY|ShiftMask,             XK_Return,     spawn,                  {.v = termcmd } },
 	#if RIODRAW_PATCH
-	{ MODKEY|ControlMask,           XK_p,          riospawnsync,           {.v = dmenucmd } },
 	{ MODKEY|ControlMask,           XK_Return,     riospawn,               {.v = termcmd } },
 	{ MODKEY,                       XK_s,          rioresize,              {0} },
 	#endif // RIODRAW_PATCH
@@ -930,12 +955,6 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_Up,         focusdir,               {.i = 2 } }, // up
 	{ MODKEY,                       XK_Down,       focusdir,               {.i = 3 } }, // down
 	#endif // FOCUSDIR_PATCH
-	#if PLACEDIR_PATCH
-	{ MODKEY|ControlMask,           XK_Left,       placedir,               {.i = 0 } }, // left
-	{ MODKEY|ControlMask,           XK_Right,      placedir,               {.i = 1 } }, // right
-	{ MODKEY|ControlMask,           XK_Up,         placedir,               {.i = 2 } }, // up
-	{ MODKEY|ControlMask,           XK_Down,       placedir,               {.i = 3 } }, // down
-	#endif // PLACEDIR_PATCH
 	#if SWAPFOCUS_PATCH && PERTAG_PATCH
 	{ MODKEY,                       XK_s,          swapfocus,              {.i = -1 } },
 	#endif // SWAPFOCUS_PATCH
@@ -1004,22 +1023,16 @@ static const Key keys[] = {
 	#endif // INSETS_PATCH
 	{ MODKEY,                       XK_Return,     zoom,                   {0} },
 	#if VANITYGAPS_PATCH
-	{ MODKEY|Mod4Mask,              XK_u,          incrgaps,               {.i = +1 } },
-	{ MODKEY|Mod4Mask|ShiftMask,    XK_u,          incrgaps,               {.i = -1 } },
-	{ MODKEY|Mod4Mask,              XK_i,          incrigaps,              {.i = +1 } },
-	{ MODKEY|Mod4Mask|ShiftMask,    XK_i,          incrigaps,              {.i = -1 } },
-	{ MODKEY|Mod4Mask,              XK_o,          incrogaps,              {.i = +1 } },
-	{ MODKEY|Mod4Mask|ShiftMask,    XK_o,          incrogaps,              {.i = -1 } },
-	{ MODKEY|Mod4Mask,              XK_6,          incrihgaps,             {.i = +1 } },
-	{ MODKEY|Mod4Mask|ShiftMask,    XK_6,          incrihgaps,             {.i = -1 } },
-	{ MODKEY|Mod4Mask,              XK_7,          incrivgaps,             {.i = +1 } },
-	{ MODKEY|Mod4Mask|ShiftMask,    XK_7,          incrivgaps,             {.i = -1 } },
-	{ MODKEY|Mod4Mask,              XK_8,          incrohgaps,             {.i = +1 } },
-	{ MODKEY|Mod4Mask|ShiftMask,    XK_8,          incrohgaps,             {.i = -1 } },
-	{ MODKEY|Mod4Mask,              XK_9,          incrovgaps,             {.i = +1 } },
-	{ MODKEY|Mod4Mask|ShiftMask,    XK_9,          incrovgaps,             {.i = -1 } },
-	{ MODKEY|Mod4Mask,              XK_0,          togglegaps,             {0} },
-	{ MODKEY|Mod4Mask|ShiftMask,    XK_0,          defaultgaps,            {0} },
+	{ MODKEY|Mod1Mask,              XK_6,          incrihgaps,             {.i = +1 } },
+	{ MODKEY|Mod1Mask|ShiftMask,    XK_6,          incrihgaps,             {.i = -1 } },
+	{ MODKEY|Mod1Mask,              XK_7,          incrivgaps,             {.i = +1 } },
+	{ MODKEY|Mod1Mask|ShiftMask,    XK_7,          incrivgaps,             {.i = -1 } },
+	{ MODKEY|Mod1Mask,              XK_8,          incrohgaps,             {.i = +1 } },
+	{ MODKEY|Mod1Mask|ShiftMask,    XK_8,          incrohgaps,             {.i = -1 } },
+	{ MODKEY|Mod1Mask,              XK_9,          incrovgaps,             {.i = +1 } },
+	{ MODKEY|Mod1Mask|ShiftMask,    XK_9,          incrovgaps,             {.i = -1 } },
+	{ MODKEY|Mod1Mask,              XK_0,          togglegaps,             {0} },
+	{ MODKEY|Mod1Mask|ShiftMask,    XK_0,          defaultgaps,            {0} },
 	#endif // VANITYGAPS_PATCH
 	#if ALT_TAB_PATCH
 	{ Mod1Mask,                     XK_Tab,        alttabstart,            {0} },
@@ -1043,8 +1056,8 @@ static const Key keys[] = {
 	{ MODKEY|Mod4Mask,              XK_backslash,  shiftviewclients,       { .i = +1 } },
 	#endif // SHIFTVIEW_CLIENTS_PATCH
 	#if SHIFTBOTH_PATCH
-	{ MODKEY|ControlMask,           XK_Left,       shiftboth,              { .i = -1 } }, // note keybinding conflict with focusadjacenttag tagandviewtoleft placedir
-	{ MODKEY|ControlMask,           XK_Right,      shiftboth,              { .i = +1 } }, // note keybinding conflict with focusadjacenttag tagandviewtoright placedir
+	{ MODKEY|ControlMask,           XK_Left,       shiftboth,              { .i = -1 } }, // note keybinding conflict with focusadjacenttag tagandviewtoleft
+	{ MODKEY|ControlMask,           XK_Right,      shiftboth,              { .i = +1 } }, // note keybinding conflict with focusadjacenttag tagandviewtoright
 	#endif // SHIFTBOTH_PATCH
 	#if SHIFTSWAPTAGS_PATCH && SWAPTAGS_PATCH
 	{ MODKEY|Mod4Mask|ShiftMask,    XK_Left,       shiftswaptags,          { .i = -1 } },
@@ -1106,13 +1119,10 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_Escape,     togglenomodbuttons,     {0} },
 	#endif // NO_MOD_BUTTONS_PATCH
 	#if RENAMED_SCRATCHPADS_PATCH
-	{ MODKEY,                       XK_grave,      togglescratch,          {.v = scratchpadcmd } },
-	{ MODKEY|ControlMask,           XK_grave,      setscratch,             {.v = scratchpadcmd } },
-	{ MODKEY|ShiftMask,             XK_grave,      removescratch,          {.v = scratchpadcmd } },
 	#elif SCRATCHPADS_PATCH
-	{ MODKEY,                       XK_grave,      togglescratch,          {.ui = 0 } },
-	{ MODKEY|ControlMask,           XK_grave,      setscratch,             {.ui = 0 } },
-	{ MODKEY|ShiftMask,             XK_grave,      removescratch,          {.ui = 0 } },
+	{ MODKEY,                       XK_t,      togglescratch,          {.ui = 0 } },
+	{ MODKEY|ControlMask,           XK_y,      setscratch,             {.ui = 0 } },
+	{ MODKEY|ShiftMask,             XK_i,      removescratch,          {.ui = 0 } },
 	#endif // SCRATCHPADS_PATCH | RENAMED_SCRATCHPADS_PATCH
 	#if UNFLOATVISIBLE_PATCH
 	{ MODKEY|Mod4Mask,              XK_space,      unfloatvisible,         {0} },
@@ -1150,8 +1160,8 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_Right,      viewtoright,            {0} }, // note keybinding conflict with focusdir
 	{ MODKEY|ShiftMask,             XK_Left,       tagtoleft,              {0} }, // note keybinding conflict with shifttag
 	{ MODKEY|ShiftMask,             XK_Right,      tagtoright,             {0} }, // note keybinding conflict with shifttag
-	{ MODKEY|ControlMask,           XK_Left,       tagandviewtoleft,       {0} }, // note keybinding conflict with placedir
-	{ MODKEY|ControlMask,           XK_Right,      tagandviewtoright,      {0} }, // note keybinding conflict with placedir
+	{ MODKEY|ControlMask,           XK_Left,       tagandviewtoleft,       {0} },
+	{ MODKEY|ControlMask,           XK_Right,      tagandviewtoright,      {0} },
 	#endif // FOCUSADJACENTTAG_PATCH
 	#if TAGALL_PATCH
 	{ MODKEY|ShiftMask,             XK_F1,         tagall,                 {.v = "F1"} },
@@ -1190,8 +1200,8 @@ static const Key keys[] = {
 	#if BAR_TAGGRID_PATCH
 	{ MODKEY|ControlMask,           XK_Up,         switchtag,              { .ui = SWITCHTAG_UP    | SWITCHTAG_VIEW } },
 	{ MODKEY|ControlMask,           XK_Down,       switchtag,              { .ui = SWITCHTAG_DOWN  | SWITCHTAG_VIEW } },
-	{ MODKEY|ControlMask,           XK_Right,      switchtag,              { .ui = SWITCHTAG_RIGHT | SWITCHTAG_VIEW } }, // note keybinding conflict with placedir
-	{ MODKEY|ControlMask,           XK_Left,       switchtag,              { .ui = SWITCHTAG_LEFT  | SWITCHTAG_VIEW } }, // note keybinding conflict with placedir
+	{ MODKEY|ControlMask,           XK_Right,      switchtag,              { .ui = SWITCHTAG_RIGHT | SWITCHTAG_VIEW } },
+	{ MODKEY|ControlMask,           XK_Left,       switchtag,              { .ui = SWITCHTAG_LEFT  | SWITCHTAG_VIEW } },
 	{ MODKEY|Mod4Mask,              XK_Up,         switchtag,              { .ui = SWITCHTAG_UP    | SWITCHTAG_TAG | SWITCHTAG_VIEW } },
 	{ MODKEY|Mod4Mask,              XK_Down,       switchtag,              { .ui = SWITCHTAG_DOWN  | SWITCHTAG_TAG | SWITCHTAG_VIEW } },
 	{ MODKEY|Mod4Mask,              XK_Right,      switchtag,              { .ui = SWITCHTAG_RIGHT | SWITCHTAG_TAG | SWITCHTAG_VIEW } },
@@ -1284,8 +1294,8 @@ static const Key keys[] = {
 	{ MODKEY|ControlMask,           XK_numbersign, setborderpx,            {.i = 0 } },
 	#endif // SETBORDERPX_PATCH
 	#if CYCLELAYOUTS_PATCH
-	{ MODKEY|ControlMask,           XK_comma,      cyclelayout,            {.i = -1 } },
-	{ MODKEY|ControlMask,           XK_period,     cyclelayout,            {.i = +1 } },
+	{ MODKEY|ControlMask,           XK_q,      cyclelayout,            {.i = -1 } },
+	{ MODKEY|ControlMask,           XK_w,     cyclelayout,             {.i = +1 } },
 	#endif // CYCLELAYOUTS_PATCH
 	#if MPDCONTROL_PATCH
 	{ MODKEY,                       XK_F1,         mpdchange,              {.i = -1} },
@@ -1356,9 +1366,9 @@ static const Button buttons[] = {
 	{ ClkStatusText,        0,                   Button2,        sigstatusbar,   {.i = 2 } },
 	{ ClkStatusText,        0,                   Button3,        sigstatusbar,   {.i = 3 } },
 	#elif BAR_STATUSCMD_PATCH
-	{ ClkStatusText,        0,                   Button1,        spawn,          {.v = statuscmd } },
-	{ ClkStatusText,        0,                   Button2,        spawn,          {.v = statuscmd } },
-	{ ClkStatusText,        0,                   Button3,        spawn,          {.v = statuscmd } },
+	{ ClkStatusText,        0,                   Button1,        sigstatusbar,          {.v = statuscmd } },
+	{ ClkStatusText,        0,                   Button2,        sigstatusbar,          {.v = statuscmd } },
+	{ ClkStatusText,        0,                   Button3,        sigstatusbar,          {.v = statuscmd } },
 	#else
 	{ ClkStatusText,        0,                   Button2,        spawn,          {.v = termcmd } },
 	#endif // BAR_STATUSCMD_PATCH
