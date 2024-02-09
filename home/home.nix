@@ -44,6 +44,11 @@
   # ".config/dunst/dunstrc".source = ./dunst/dunstrc;
   # DWM
   ".dwm/autostart.sh".source = .././suckless/dwm/autostart.sh;
+  # i3 and Polybar 
+  ".config/i3/config".source = .././i3/config;
+  ".config/polybar/config.ini".source = ../polybar/config.ini;
+  ".config/polybar/colors.ini".source = ../polybar/colors.ini;
+  ".config/polybar/modules.ini".source = ../polybar/modules.ini;
   # Bashrc 
   ".bashrc".source = .././bash/.bashrc;
   # Kitty 

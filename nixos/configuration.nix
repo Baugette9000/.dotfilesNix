@@ -10,6 +10,7 @@
     [       
       ./hardware-configuration.nix
       ../pkgs/dwm/dwm.nix
+      ../pkgs/i3/i3.nix
       ../pkgs/opentabletdriver/opentabletdriver.nix
       ../pkgs/nvidia/nvidia.nix
       ../pkgs/steam/steam.nix
@@ -142,6 +143,8 @@
     pkg-config
     libnotify
     dwmblocks
+    polybar
+    i3ipc-glib
     floorp
   # firefox
     wpgtk

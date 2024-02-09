@@ -12,7 +12,6 @@
 [[ $- != *i* ]] && return
 
 set -o vi
-HISTSIZE= HISTFILESIZE= # Infinite history.
 export EDITOR='nvim'
 export VISUAL='nvim'
 alias ls='ls --color=auto'
@@ -47,23 +46,6 @@ alias \
   sync="sudo pacman -Syu" \
   logq="pkill dwm" \
   bfetch="~/.config/i3/custom/uptimeecho" \
-  
-  # Sourcing Suckless Applications
-  mkdw="cd ~/suckless/dwm && 
-  echo 'sourcing dwm..' 
-  echo ' ' 
-  sudo make clean install 
-  cd ~/" \
-  mkst="cd ~/suckless/st  
-  echo 'sourcing st..'  
-  echo ' '
-  sudo make clean install
-  cd ~/" \
-  mkdblocks="cd ~/suckless/dwmblocks/ 
-  echo 'sourcing dwmblocks..' 
-  echo ' ' 
-  sudo make clean install 
-  cd ~/" \
 
 # Plugins 
 #if [ -f "$HOME/.bash-git-prompt/gitprompt.sh" ]; then
