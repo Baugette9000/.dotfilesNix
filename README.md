@@ -11,12 +11,9 @@
 ### Previews: 
 
 <p align ="center">
-  <img src="https://github.com/Baugette9000/.dotfilesNix/assets/119767561/521b3a49-7fdf-484c-b91a-e8f0a3250f43" />
+  <img src="https://github.com/Baugette9000/.dotfilesNix/assets/119767561/62cf4b38-9b4c-4357-b027-0921f61774c2" />
 </p>
 
-<p align="center">
-  <img src="https://github.com/Baugette9000/.dotfilesNix/assets/119767561/7368307a-5537-4f06-be27-dab12ae2d175" />
-</p>
 
 ** **
 ### *Requirements:*
