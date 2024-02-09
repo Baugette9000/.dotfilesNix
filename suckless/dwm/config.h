@@ -80,7 +80,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_f,	     zoom,           {0} },
 	{ MODKEY,                       XK_i,      incnmaster,     {.i = -1 } },
 	{ MODKEY,                       XK_o,      incnmaster,     {.i = +1 } },
-	{ MODKEY,		        XK_q,      killclient,     {0} },
+	{ MODKEY,		                    XK_c,      killclient,     {0} },
 	{ MODKEY,                       XK_w,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                       XK_e,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_r,      setlayout,      {.v = &layouts[2]} },
