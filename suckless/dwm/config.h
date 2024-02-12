@@ -1,8 +1,43 @@
-/* See LICENSE file for copyright and license details. */
+///////////////////////////////////////////////////
+///////////////////////////////////////////////////
+//
+//             ▗▄▄▄        ▗▄▄▄▄    ▄▄▄▖
+//             ▜███▙        ▜███▙  ▟███▛
+//              ▜███▙        ▜███▙▟███▛
+//               ▜███▙        ▜██████▛   
+//        ▟█████████████████▙  ▜████▛     ▟▙
+//       ▟███████████████████▙  ▜███▙    ▟██▙       
+//              ▄▄▄▄▖            ▜███▙  ▟███▛
+//             ▟███▛              ▜██▛ ▟███▛
+//            ▟███▛                ▜▛ ▟███▛                         
+//   ▟███████████▛                   ▟██████████▙
+//   ▜██████████▛                   ▟███████████▛   
+//         ▟███▛ ▟▙                ▟███▛
+//        ▟███▛ ▟██▙              ▟███▛
+//       ▟███▛  ▜███▙            ▝▀▀▀▀
+//       ▜██▛    ▜███▙  ▜██████████████████▛
+//        ▜▛     ▟████▙  ▜████████████████▛
+//              ▟██████▙        ▜███▙
+//             ▟███▛▜███▙        ▜███▙
+//            ▟███▛  ▜███▙        ▜███▙
+//            ▝▀▀▀    ▀▀▀▀▘        ▀▀▀▘
+//
+//         
+//           ██████╗ ██╗    ██╗███╗   ███╗
+//           ██╔══██╗██║    ██║████╗ ████║
+//           ██║  ██║██║ █╗ ██║██╔████╔██║
+//           ██║  ██║██║███╗██║██║╚██╔╝██║
+//           ██████╔╝╚███╔███╔╝██║ ╚═╝ ██║
+//           ╚═════╝  ╚══╝╚══╝ ╚═╝     ╚═╝
+//                             
+//
+//////////////////////////////////////////////////////                     
+//////////////////////////////////////////////////////
 
-/* appearance */
+
+/* Appearance */
 static const unsigned int borderpx  = 3;        /* border pixel of windows */
-static const unsigned int gappx     = 20;        /* gaps between windows */
+static const unsigned int gappx     = 29;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int swallowfloating    = 0;        /* 1 means swallow floating windows by default */
 static const int showbar            = 1;        /* 0 means no bar */
@@ -12,7 +47,7 @@ static const char dmenufont[]       = "JetBrains Mono Nerd Font:size=11";
 static char normbgcolor[]           = "#32302f";
 static char normbordercolor[]       = "#d3869b";
 static char normfgcolor[]           = "#ebdbb2";
-static char selfgcolor[]            = "#ebdbb2";
+static char selfgcolor[]            = "#282828";
 static char selbordercolor[]        = "#d3869b";
 static char selbgcolor[]            = "#d3869b";
 static char *colors[][3] = {
@@ -21,7 +56,7 @@ static char *colors[][3] = {
        [SchemeSel]  = { selfgcolor,  selbgcolor,  selbordercolor  },
 };
 
-/* tagging */
+/* Tagging */
 static const char *tags[] = { "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX" };
 
 static const Rule rules[] = {
@@ -33,12 +68,12 @@ static const Rule rules[] = {
 	{ "TelegramDesktop",    NULL,     NULL,           0,         1,          0,           0,        -1 },
 	{ "obs",                NULL,     NULL,           0,         1,          0,           0,        -1 },
 	{ "Lutris",             NULL,     NULL,           0,         1,          0,           0,        -1 },
-	{ "firefox",   		NULL,     NULL,           1 << 2,    0,          0,          -1,        -1 },
+	{ "firefox",   		      NULL,     NULL,           1 << 2,    0,          0,          -1,        -1 },
 	{ "St",                 NULL,     NULL,           0,         0,          1,           0,        -1 },
 	{ NULL,                 NULL,     "Event Tester", 0,         0,          0,           1,        -1 }, /* xev */
 };
 
-/* layout(s) */
+/* Layout(s) */
 static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
@@ -99,9 +134,9 @@ static Key keys[] = {
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
-	{ MODKEY,			XK_minus,  setgaps,	   {.i = -1 } },
-	{ MODKEY,			XK_equal,  setgaps,	   {.i = +1 } },
-	{ MODKEY|ShiftMask,		XK_equal,  setgaps,	   {.i =  0 } },
+	{ MODKEY,			                  XK_minus,  setgaps,	       {.i = -1 } },
+	{ MODKEY,			                  XK_equal,  setgaps,	       {.i = +1 } },
+	{ MODKEY|ShiftMask,		          XK_equal,  setgaps,	       {.i =  0 } },
 	{ MODKEY,                       XK_F5,     xrdb,           {.v = NULL } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)

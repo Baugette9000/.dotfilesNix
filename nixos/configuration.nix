@@ -10,7 +10,7 @@
     [       
       ./hardware-configuration.nix
       ../pkgs/dwm/dwm.nix
-      ../pkgs/i3/i3.nix
+      #../pkgs/i3/i3.nix
       ../pkgs/opentabletdriver/opentabletdriver.nix
       ../pkgs/nvidia/nvidia.nix
       ../pkgs/steam/steam.nix
@@ -145,6 +145,8 @@
     dwmblocks
     polybar
     i3ipc-glib
+    i3lock-color
+    betterlockscreen
     floorp
   # firefox
     wpgtk
