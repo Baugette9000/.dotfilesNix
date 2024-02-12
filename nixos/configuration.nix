@@ -168,6 +168,7 @@
     #python311Packages.uptime
     pavucontrol
     htop
+    tree
     kitty
     rofi 
     dmenu
