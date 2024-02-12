@@ -11,7 +11,7 @@
 ### Previews: 
 
 <p align ="center">
-  <img src="https://github.com/Baugette9000/.dotfilesNix/assets/119767561/62cf4b38-9b4c-4357-b027-0921f61774c2" />
+  <img src="https://github.com/Baugette9000/.dotfilesNix/assets/119767561/c2cf569a-e556-4638-aeff-b950ef4c097e" />
 </p>
 
 
