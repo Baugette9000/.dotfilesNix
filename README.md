@@ -33,7 +33,7 @@
 ** **
 ### *Requirements:*
 - *Have NixOS Installed (duh!)*
-- *Have Home-Manager installed (see https://nix-community.github.io/home-manager/)*
+- *More info below*
 
 
 ### *Mini Wiki* 
