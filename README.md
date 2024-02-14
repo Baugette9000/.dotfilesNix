@@ -1,12 +1,18 @@
-## *❥ .dotfilesNix*
-
-**Custom NixOS Configuration for Bread's Linux devices**
-﻿
-### *(Built with an Nvidia GPU in mind)*
 
 <p align="center">
-  <img src="https://github.com/Baugette9000/.dotfilesNix/assets/119767561/907dc3bd-ec0f-42cc-8368-e59c83892157" />
+  <img src="https://github.com/Baugette9000/.dotfilesNix/assets/119767561/84b31321-43fe-48b7-97ab-dc72e39175b8" width=50% height=50% />
 </p>
+
+ 
+<p align="center">
+  <img src="https://img.shields.io/badge/NixOS-Stable-blue?style=flat&logo=nixos&logoColor=%235277C3&labelColor=%233c3836&color=%235277C3&link=https%3A%2F%2Fnixos.org%2F" />
+  <img src="https://img.shields.io/badge/Nix%20Flake-enabled-blue?style=flat&logo=nixos&logoColor=%235277C3&label=Nix%20Flake&labelColor=%233c3836&color=%238662fc&link=https%3A%2F%2Fnixos.org%2F" />
+<p align="center">
+  <img src="https://img.shields.io/badge/source-blue?style=flat&logo=dwm&logoColor=%2383a598&label=Suckless%20Dwm&labelColor=%233c3836&color=%23b16286&link=https%3A%2F%2Fdwm.suckless.org%2Fdwm" />
+<p align="center"> 
+ ❥ .dotfilesNix
+</p>
+
 
 ### Previews: 
 
@@ -15,74 +21,20 @@
 </p>
 
 
+### *Ricing Shenanigans*
+  - **Shell** • ![Bash](https://www.gnu.org/software/bash/) & ![Ble.sh](https://github.com/akinomyoga/ble.sh)
+  - **Window Manager** • ![Dwm](https://dwm.suckless.org/)
+  - **Terminal** • ![Kitty](https://sw.kovidgoyal.net/kitty/)
+  - **Notification Daemon** • ![Dunst](https://github.com/dunst-project/dunst)
+  - **Launcher** • ![Rofi](https://github.com/davatorium/rofi)
+  - **IDE** • ![NVChad](https://nvchad.com/)
+  - **Statusbar** • ![Slstatus](https://tools.suckless.org/slstatus/)
+
 ** **
 ### *Requirements:*
 - *Have NixOS Installed (duh!)*
 - *Have Home-Manager installed (see https://nix-community.github.io/home-manager/)*
 
-***List of programs in the configuration.nix:***
-
-    - vim ( For Fallbacks with sudo, but nvim is preferred )
-    - wget
-    - meson 
-    - ninja
-    - cmake 
-    - devour
-    - pkg-config
-    - libnotify
-    - dwmblocks
-    - floorp
-    - firefox ( Commented out by Default for easy switching between Floorp and Firefox )
-    - vesktop ( Custom Discord Client )
-    - ncspot
-    - git
-    - pciutils
-    - pavucontrol
-    - htop
-    - kitty
-    - rofi 
-    - dmenu
-    - neovim
-    - ranger
-    - dunst
-    - mpd
-    - acpi
-    - cbonsai
-    - cmatrix  
-    - pipes
-    - scrot
-    - acpi
-    - slstatus ( Suckless status toolbar )
-    - unixtools.top
-    - st 
-    - feh 
-    - flatpak
-    - neofetch
-    - gnumake
-    - python3
-    - rustup
-    - rustc
-    - libsForQt5.bismuth
-    - playerctl
-    - gccgo12 ( gcc compilers for use with DWM )
-    - gccgo13
-    - gccgo
-    - gcc9
-    - gcc_multi
-    - opentabletdriver ( I am an artist, so I have OTD and Krita in my configuration.nix )
-    - krita
-    - xorg.libX11 ( X11 )
-    - xorg.libX11.dev
-    - xorg.libxcb
-    - xorg.libXft
-    - xorg.libXinerama
-    - xorg.xinit
-    - xorg.xinput
-    - maim
-    - xclip
-    - openrgb ( Configuring RGB with proprietary components )
-    - unclutter
-    - redshift
 
 ### *Mini Wiki* 
 ❥ Git clone the repo into the home folder with:
@@ -109,18 +61,6 @@
     $ home-manager switch --flake .
     $ sudo nixos-rebuild switch --flake .
     
-
-## *PLEASE NOTE*: Some of the configurations in this repo are forked from other projects. 
-
-  *Repositories I know that are in the configuration:*
-
-  **Slstatus Mental Outlaw - (see, https://github.com/MentalOutlaw/slstatus)**
-  
-  **Rofi - Most Rofi Configurations come from the Archcraft distro. (see, https://archcraft.io/ or https://github.com/archcraft-os**
-  
-  **NvChad - NvChad is a Neovim distro. (see, https://nvchad.com/ & https://github.com/NvChad/NvChad)**
- 
-  **The startpage in the previews is forked from: https://gitlab.com/wolfiy/wlfys-minimal-startpage**
 
   ** **
 
