@@ -84,15 +84,30 @@
     - unclutter
     - redshift
 
-### *Steps to reproduce* 
+### *Mini Wiki* 
+❥ Git clone the repo into the home folder with:
 
-    ❥ Git clone the repo into the home folder with:
-      $ git clone https://github.com/Baugette9000/.dotfilesNix/ ~/
+    $ git clone https://github.com/Baugette9000/.dotfilesNix/ ~/
     
-    ❥ Install Home-Manager by following the guide at https://nix-community.github.io/home-manager/index.xhtml#sec-install-standalone
+
+❥ Install Home-Manager by running these commands:
+
+(Run unstable at your own digression, as I have not tested the unstable branch with my configs.)
+
+    $ nix-channel --add https://github.com/nix-community/home-manager/archive/release-23.11.tar.gz home-manager
+    (For unstable run; 'nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager')
+    $ nix-channel --update
+    $ nix-shell '<home-manager>' -A install (You may have to log out first for this to work)
+
+❥ Change the Directory to "nixos" and run:
     
-    ❥ Once Home-Manager is installed, run this command in the cloned repo:
-      $ sudo nixos-rebuild --flake .
+    $ rm -rf hardware-configuration.nix
+    $ cp -r /etc/nixos/hardware-configuration.nix .
+   
+❥ Once Home-Manager is installed and you have replaced the hardware-configuration.nix, run these commands in the cloned repo:
+  
+    $ home-manager switch --flake .
+    $ sudo nixos-rebuild switch --flake .
     
 
 ## *PLEASE NOTE*: Some of the configurations in this repo are forked from other projects. 
