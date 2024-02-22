@@ -16,6 +16,7 @@
       ../pkgs/steam/steam.nix
       ../pkgs/picom/picom.nix
       ../pkgs/garbagecollector/garbagecollector.nix
+      ../pkgs/openrgb/openrgb.nix
       #./slstatus.nix
     ];
 
@@ -36,6 +37,20 @@
   # Enable the KDE Desktop Environment.
   services.xserver.displayManager.sddm.enable = true;
   services.xserver.desktopManager.plasma5.enable = true; 
+  #services.xserver.desktopManager.cde.enable = true;
+  environment.etc = {
+    "xdg/gtk-2.0/gtkrc".text = "gtk-error-bell=0";
+    "xdg/gtk-3.0/settings.ini".text = ''
+      [Settings]
+      gtk-theme-name="gruvbox-dark"
+      gtk-icon-name="oomox-gruvbox-dark"
+    '';
+    "xdg/gtk-4.0/settings.ini".text = ''
+      [Settings]
+      gtk-theme-name="gruvbox-dark"
+      gtk-icon-name="oomox-gruvbox-dark"
+    '';
+  };
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -149,6 +164,8 @@
     betterlockscreen
     floorp
   # firefox
+    spicetify-cli
+    spotify
     wpgtk
     nwg-look
     gtk-engine-murrine

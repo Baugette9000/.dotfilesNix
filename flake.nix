@@ -25,6 +25,7 @@
         url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
         inputs.nixpkgs.follows = "nixpkgs";
       };
+
     homeConfigurations = { 
       hardware.nvidia.enable = true;
       cleo = home-manager.lib.homeManagerConfiguration {
