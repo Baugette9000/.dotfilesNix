@@ -5,7 +5,6 @@
   
   ./dunst/dunst.nix
   ./gtk/gtk.nix
-  ./spicetify
 
   ];
 
