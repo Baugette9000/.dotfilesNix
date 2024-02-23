@@ -17,6 +17,7 @@
       ../pkgs/picom/picom.nix
       ../pkgs/garbagecollector/garbagecollector.nix
       ../pkgs/openrgb/openrgb.nix
+      #../pkgs/sddm/default.nix
       #./slstatus.nix
     ];
 
@@ -31,12 +32,37 @@
     useOSProber = true;
     };
 
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
-
-  # Enable the KDE Desktop Environment.
-  services.xserver.displayManager.sddm.enable = true;
-  services.xserver.desktopManager.plasma5.enable = true; 
+    # X11.
+    services.xserver = {
+    enable = true;
+    # Enable Desktop Enviornments.
+    desktopManager = {
+      #xfce.enable = true;
+      plasma5.enable = true;
+      #gnome.enable = true;
+      #lxde.enable = true;
+      };
+      displayManager = {
+        sddm = { 
+          enable = true;
+          theme = "${import ../pkgs/sddm/sddm.nix { inherit pkgs; }}";
+        };
+        #lightdm.enable = true;
+        #gdm.enable = true; 
+      };
+    };
+ 
+  # getting flatpak to work without plasma
+    services.flatpak = {
+      enable = true;
+    };
+    
+    xdg = { 
+      portal = { 
+        extraPortals = [ pkgs.xdg-desktop-portal-gtk ]; 
+        enable = true; 
+      };
+    };
   #services.xserver.desktopManager.cde.enable = true;
   environment.etc = {
     "xdg/gtk-2.0/gtkrc".text = "gtk-error-bell=0";
@@ -129,8 +155,7 @@
   };
 
   # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
-  services.flatpak.enable = true;
+  nixpkgs.config.allowUnfree = true; 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   fonts.packages = with pkgs; [
@@ -147,6 +172,7 @@
     proggyfonts  
     cascadia-code
   ];
+
 
   environment.systemPackages = with pkgs; [
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
