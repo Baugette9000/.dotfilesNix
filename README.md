@@ -39,7 +39,7 @@
 ### *Mini Wiki* 
 ❥ Git clone the repo into the home folder with:
 
-    $ git clone https://github.com/Baugette9000/.dotfilesNix/ ~/
+    $ git clone https://github.com/Baugette9000/.dotfilesNix/
     
 
 ❥ Install Home-Manager by running these commands:
@@ -56,12 +56,11 @@
     $ rm -rf hardware-configuration.nix
     $ cp -r /etc/nixos/hardware-configuration.nix .
    
-❥ Once Home-Manager is installed and you have replaced the hardware-configuration.nix, run these commands in the cloned repo:
+❥ Once Home-Manager is installed and you have replaced the hardware-configuration.nix, run these commands in the cloned repo's directory (NOT in the "nixos" folder) to build the NixOS system and Home-Manager:
   
-    $ home-manager switch --flake .
     $ sudo nixos-rebuild switch --flake .
+    $ home-manager switch --flake .
     
 
   ** **
 
-*❥ I love NixOS.*
